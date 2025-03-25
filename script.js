@@ -31,12 +31,47 @@ function toggleLanguage() {
     }
 }
 
+// Function to save checklist state in localStorage
+function saveChecklistState() {
+    const checklistState = [];
+    document.querySelectorAll("input[type='checkbox']").forEach(checkbox => {
+        checklistState.push({
+            id: checkbox.id,
+            checked: checkbox.checked
+        });
+    });
+    localStorage.setItem('checklistState', JSON.stringify(checklistState));
+}
+
+// Function to load checklist state from localStorage
+function loadChecklistState() {
+    const checklistState = JSON.parse(localStorage.getItem('checklistState'));
+    if (checklistState) {
+        checklistState.forEach(state => {
+            const checkbox = document.getElementById(state.id);
+            if (checkbox) {
+                checkbox.checked = state.checked;
+                if (state.checked) {
+                    checkbox.parentElement.classList.add('completed');
+                }
+            }
+        });
+    }
+}
+
+// Event listeners for checkbox changes
 document.querySelectorAll("input[type='checkbox']").forEach(checkbox => {
     checkbox.addEventListener("change", function() {
         checkbox.parentElement.classList.toggle("completed", checkbox.checked);
+        saveChecklistState(); // Save checklist state every time a checkbox changes
         if (document.querySelectorAll("input[type='checkbox']:checked").length === 7) {
             document.getElementById("checklist-container").style.display = "none";
             document.getElementById("popup").style.display = "block";
         }
     });
 });
+
+// Load the checklist state when the page loads
+window.onload = function() {
+    loadChecklistState(); // Load saved state from localStorage
+}
