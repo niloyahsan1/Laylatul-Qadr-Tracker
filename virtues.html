@@ -8,15 +8,15 @@
     <meta name="description"
         content="Discover the virtues, Quranic verses, authentic Hadiths, and recommended deeds for Laylatul Qadr.">
     <link rel="icon" type="image/png" href="./assets/favicon.png">
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Hind+Siliguri:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Hind+Siliguri:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="./styles.css">
 </head>
 
 <body>
-    <!-- Top Header Row: Most left links, centered title, most right button -->
     <header class="top-header-row">
         <div class="nav-links">
             <a href="index.html" class="nav-item" id="nav-checklist">চেকলিস্ট</a>
@@ -30,14 +30,12 @@
         </div>
     </header>
 
-    <!-- Main Content Container -->
     <main class="main-container">
         <p class="hero-subtitle" id="virtues-subtitle" style="text-align: center; margin-bottom: 24px;">
             মহিমান্বিত কদর রজনীর তাৎপর্য, পবিত্র কুরআনের আয়াত, হাদিস ও সেরা আমলসমূহ জানুন।
         </p>
 
         <div class="virtues-container">
-            <!-- Quranic Significance Card -->
             <article class="card">
                 <h2 class="card-title" id="v1-title">কুরআনের আলোকে লাইলাতুল কদর</h2>
                 <div class="card-body">
@@ -57,9 +55,8 @@
                 </div>
             </article>
 
-            <!-- Probable Nights Card -->
             <article class="card">
-                <h2 class="card-title" id="v2-title">🔹 শবে কদরের সম্ভাব্য রাতসমূহ</h2>
+                <h2 class="card-title" id="v2-title">শবে কদরের সম্ভাব্য রাতসমূহ</h2>
                 <div class="card-body">
                     <p id="v2-text">
                         রমজানের শেষ দশদিনের যেকোনো বিজোড় রাতে লাইলাতুল কদর হতে পারে, অর্থাৎ ২১, ২৩, ২৫, ২৭ বা ২৯ রমজানের
@@ -68,9 +65,8 @@
                 </div>
             </article>
 
-            <!-- Special Dua Card -->
             <article class="card" style="border-color: var(--border-gold); background: rgba(212, 175, 55, 0.03);">
-                <h2 class="card-title" id="v3-title">🤲 লাইলাতুল কদরের বিশেষ দোয়া</h2>
+                <h2 class="card-title" id="v3-title">লাইলাতুল কদরের বিশেষ দোয়া</h2>
                 <div class="card-body">
                     <div class="dua-arabic">اللَّهُمَّ إِنَّكَ عَفُوٌّ تُحِبُّ العَفْوَ فَاعْفُ عَنِّي</div>
                     <div class="dua-transliteration" id="v3-transliteration">উচ্চারণ: আল্লাহুম্মা ইন্নাকা আফউউন,
@@ -80,18 +76,14 @@
                 </div>
             </article>
 
-            <!-- Recommended Deeds Card -->
             <article class="card">
-                <h2 class="card-title" id="v4-title">🕌 লাইলাতুল কদরে করণীয় আমল</h2>
+                <h2 class="card-title" id="v4-title">লাইলাতুল কদরে করণীয় আমল</h2>
                 <div class="card-body">
-                    <ul class="virtues-list" id="virtues-list-container">
-                        <!-- Populated dynamically via JS -->
-                    </ul>
+                    <ul class="virtues-list" id="virtues-list-container"></ul>
                 </div>
             </article>
         </div>
 
-        <!-- Back Button Navigation -->
         <div style="text-align: center; margin-top: 36px;">
             <a href="index.html" class="btn-primary" style="text-decoration: none; display: inline-block;">
                 <span id="back-btn-text">← চেকলিস্টে ফিরে যান</span>

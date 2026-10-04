@@ -26,7 +26,6 @@ const translations = {
         modalBtn: "Close Window",
         langBtnText: "বাংলা",
         
-        // Virtues Page Text
         virtuesTitle: "Virtues & Deeds of Laylatul Qadr",
         virtuesSubtitle: "Discover the immense significance, authentic Hadiths, and recommended acts of worship for the Night of Decree.",
         virtue1Title: "Meaning & Quranic Significance",
@@ -77,7 +76,6 @@ const translations = {
         modalBtn: "বন্ধ করুন",
         langBtnText: "English",
 
-        // Virtues Page Text
         virtuesTitle: "লাইলাতুল কদরের ফজিলত ও আমলসমূহ",
         virtuesSubtitle: "মহিমান্বিত কদর রজনীর তাৎপর্য, পবিত্র কুরআনের আয়াত, হাদিস ও সেরা আমলসমূহ জানুন।",
         virtue1Title: "কদরের তাৎপর্য ও কুরআনের আলোকপাত",
@@ -104,10 +102,8 @@ const translations = {
     }
 };
 
-// Current state
 let currentLang = localStorage.getItem('langPref') || 'bn';
 
-// Update DOM elements on language toggle
 function applyLanguage(lang) {
     currentLang = lang;
     localStorage.setItem('langPref', lang);
@@ -115,7 +111,6 @@ function applyLanguage(lang) {
     const t = translations[lang];
     if (!t) return;
 
-    // Common Nav Elements
     const navChecklist = document.getElementById("nav-checklist");
     if (navChecklist) navChecklist.innerText = t.navChecklist;
 
@@ -125,7 +120,6 @@ function applyLanguage(lang) {
     const langBtnText = document.getElementById("lang-btn-text");
     if (langBtnText) langBtnText.innerText = t.langBtnText;
 
-    // Index / Checklist Page Elements
     const heroTitle = document.getElementById("hero-title");
     if (heroTitle) heroTitle.innerText = t.heroTitle;
 
@@ -135,7 +129,6 @@ function applyLanguage(lang) {
     const progressLabel = document.getElementById("progress-label");
     if (progressLabel) progressLabel.innerText = t.progressLabel;
 
-    // Checklist Tasks
     const taskTexts = document.querySelectorAll(".task-text");
     if (taskTexts.length > 0) {
         taskTexts.forEach((el, idx) => {
@@ -143,7 +136,6 @@ function applyLanguage(lang) {
         });
     }
 
-    // Tips Cards
     const tip1Title = document.getElementById("tip1-title");
     if (tip1Title) tip1Title.innerText = t.tip1Title;
     const tip1Desc = document.getElementById("tip1-desc");
@@ -159,7 +151,6 @@ function applyLanguage(lang) {
     const tip3Desc = document.getElementById("tip3-desc");
     if (tip3Desc) tip3Desc.innerText = t.tip3Desc;
 
-    // Modal
     const modalTitle = document.getElementById("modal-title");
     if (modalTitle) modalTitle.innerText = t.modalTitle;
     const modalText = document.getElementById("modal-text");
@@ -167,7 +158,6 @@ function applyLanguage(lang) {
     const modalBtn = document.getElementById("modal-btn");
     if (modalBtn) modalBtn.innerText = t.modalBtn;
 
-    // Virtues Page Elements
     const virtuesTitle = document.getElementById("virtues-title");
     if (virtuesTitle) virtuesTitle.innerText = t.virtuesTitle;
 
@@ -219,7 +209,6 @@ function toggleLanguage() {
     applyLanguage(newLang);
 }
 
-// Save & Load Checklist State
 function updateProgress() {
     const items = document.querySelectorAll(".task-item");
     if (items.length === 0) return;
@@ -285,7 +274,6 @@ function closeModal() {
     if (modal) modal.classList.remove("active");
 }
 
-// Initialize on DOM load
 document.addEventListener("DOMContentLoaded", () => {
     applyLanguage(currentLang);
     setupChecklistListeners();

@@ -46,7 +46,6 @@ body {
     padding-bottom: 40px;
 }
 
-/* Top Header Row (Full screen width: Most left, center title, most right) */
 .top-header-row {
     width: 80%;
     padding: 24px 40px;
@@ -128,14 +127,12 @@ body {
     transform: translateY(-1px);
 }
 
-/* Main Container Layout */
 .main-container {
     width: 100%;
     max-width: 850px;
     padding: 0 20px;
 }
 
-/* Hero & Header Section */
 .hero-header {
     text-align: center;
     margin-bottom: 24px;
@@ -167,7 +164,6 @@ body {
     color: var(--accent-gold-light);
 }
 
-/* Progress Bar Component */
 .progress-card {
     background: var(--bg-card);
     border: 1px solid var(--border-color);
@@ -213,7 +209,6 @@ body {
     transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Checklist Styling */
 .checklist-wrapper {
     display: flex;
     flex-direction: column;
@@ -247,7 +242,6 @@ body {
     transition: all 0.25s ease;
 }
 
-/* Unique Theme Accents per Task */
 .task-1 {
     border-left-color: #d4af37;
 }
@@ -318,7 +312,6 @@ body {
     transform: translateY(-2px);
 }
 
-/* Completed Task State Override */
 .task-item.completed {
     background: rgba(46, 204, 113, 0.05) !important;
     border-color: rgba(46, 204, 113, 0.3) !important;
@@ -392,7 +385,6 @@ body {
     color: var(--text-muted);
 }
 
-/* Quick Tips Cards */
 .tips-section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -441,7 +433,6 @@ body {
     color: var(--accent-gold-light);
 }
 
-/* Modal Popup */
 .modal-overlay {
     position: fixed;
     top: 0;
@@ -525,7 +516,6 @@ body {
     box-shadow: 0 0 25px rgba(212, 175, 55, 0.35);
 }
 
-/* Virtues Page Specific Styles */
 .virtues-container {
     display: flex;
     flex-direction: column;
@@ -634,7 +624,6 @@ body {
     margin-top: 2px;
 }
 
-/* Responsive Media Queries */
 @media (max-width: 640px) {
     .top-header-row {
         width: 100%;
