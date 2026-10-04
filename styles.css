@@ -638,13 +638,31 @@ body {
     .top-header-row {
         width: 100%;
         padding: 16px 20px;
-        flex-direction: column;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
         gap: 12px;
     }
 
+    .nav-links {
+        order: 1;
+        flex: 0 0 auto;
+    }
+
+    .lang-btn-wrapper {
+        order: 2;
+        flex: 0 0 auto;
+    }
+
     .header-title {
-        font-size: 1.4rem;
+        order: 3;
+        width: 100%;
+        flex: 0 0 100%;
+        font-size: 1.35rem;
         white-space: normal;
+        text-align: center;
+        margin-top: 4px;
     }
 
     .task-item {
