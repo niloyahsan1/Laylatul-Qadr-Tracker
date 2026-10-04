@@ -14,7 +14,7 @@ A modern, responsive, multi-lingual web application designed to help Muslims tra
 - State Persistence
 - Virtues & Authentic Hadiths
 - Sleek Dark Mode
-[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen?style=for-the-badge&logo=github)](https://niloyahsan1.github.io/Laylatul-Qadr-Tracker/)
+
 
 ## Live Demo
 Experience the live website: [**Laylatul Qadr Tracker Live**](https://niloyahsan1.github.io/Laylatul-Qadr-Tracker/)
