@@ -1,64 +1,105 @@
 <!DOCTYPE html>
 <html lang="bn">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>লাইলাতুল কদরের ফজিলত ও আমলসমূহ</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link id="stylesheet" rel="stylesheet" type="text/css" href="./virtues.css">
-    <!-- <link rel="website icon" type="png" href="./image/logo.png"> -->
-    <script src=""></script>
+    <title>লাইলাতুল কদরের ফজিলত ও আমলসমূহ - Laylatul Qadr Tracker</title>
+    <meta name="description"
+        content="Discover the virtues, Quranic verses, authentic Hadiths, and recommended deeds for Laylatul Qadr.">
+    <link rel="icon" type="image/png" href="./assets/favicon.png">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Hind+Siliguri:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
 </head>
 
 <body>
-    <div class="container">
-        <h1>লাইলাতুল কদরের ফজিলত ও আমলসমূহ</h1>
+    <!-- Top Header Row: Most left links, centered title, most right button -->
+    <header class="top-header-row">
+        <div class="nav-links">
+            <a href="index.html" class="nav-item" id="nav-checklist">চেকলিস্ট</a>
+            <a href="virtues.html" class="nav-item active" id="nav-virtues">ফজিলত ও আমল</a>
+        </div>
+        <h1 class="header-title" id="virtues-title">লাইলাতুল কদরের ফজিলত ও আমলসমূহ</h1>
+        <div class="lang-btn-wrapper">
+            <button class="lang-btn" id="lang-toggle-btn">
+                <span id="lang-btn-text">English</span>
+            </button>
+        </div>
+    </header>
 
-        <p><span class="highlight">‘শবে কদর’</span> কথাটি ফারসি। <strong>শব</strong> মানে রাত বা রজনী আর <strong>কদর</strong> মানে সম্মান, মর্যাদা, ভাগ্য ইত্যাদি। তাই এই রাতটি মুসলমানদের জন্য ভাগ্য রজনী হিসেবে সম্মানিত।</p>
+    <!-- Main Content Container -->
+    <main class="main-container">
+        <p class="hero-subtitle" id="virtues-subtitle" style="text-align: center; margin-bottom: 24px;">
+            মহিমান্বিত কদর রজনীর তাৎপর্য, পবিত্র কুরআনের আয়াত, হাদিস ও সেরা আমলসমূহ জানুন।
+        </p>
 
-        <p>লাইলাতুল কদরের রাত হচ্ছে <strong>হাজার মাসের চেয়ে উত্তম</strong> রাত। পবিত্র কুরআনুল কারিম নাযিলের মাধ্যমে আল্লাহ রাব্বুল আলামীন এই রাতকে হাজার মাসের চেয়ে শ্রেষ্ঠ ও মহা সম্মানিত রাত হিসেবে আমাদের জন্য দান করেছেন।</p>
+        <div class="virtues-container">
+            <!-- Quranic Significance Card -->
+            <article class="card">
+                <h2 class="card-title" id="v1-title">কুরআনের আলোকে লাইলাতুল কদর</h2>
+                <div class="card-body">
+                    <p id="v1-text1">
+                        <strong>'লাইলাতুল কদর'</strong> ফারসি ও আরবি শব্দের সমন্বয়ে গঠিত, যার অর্থ <em>মর্যাদাপূর্ণ
+                            রাত</em> বা <em>ভাগ্য রজনী</em>। এই রাতে মহান আল্লাহ তাআলা পবিত্র কুরআন নাজিল করেছেন।
+                    </p>
+                    <blockquote class="quote-box">
+                        <span id="v1-quote">“নিশ্চয়ই আমি কুরআন নাজিল করেছি কদর রজনীতে। আপনি কি জানেন মহিমান্বিত কদর রজনী
+                            কী? কদর রজনী হাজার মাস অপেক্ষা উত্তম।”</span>
+                        <span class="quote-source" id="v1-quote-src">(সূরা আল-কদর: ১-৩)</span>
+                    </blockquote>
+                    <p id="v1-text2">
+                        রমজান মাসে পবিত্র কুরআন নাজিলের ফলে শবে কদর অত্যন্ত মর্যাদাপূর্ণ হয়েছে। এই এক রাতের ইবাদত ৮৩ বছর
+                        ৪ মাসের একনাগাড়ে ইবাদতের চেয়েও বেশি সওয়াব বহন করে।
+                    </p>
+                </div>
+            </article>
 
-        <h2>📖 কুরআনের আলোকে লাইলাতুল কদর</h2>
-        <p>আল্লাহ বলেন:</p>
-        <blockquote style="background: #eef; padding: 10px; border-left: 4px solid #2a5298;">
-            “নিশ্চয়ই আমি কুরআন নাজিল করেছি মর্যাদাপূর্ণ কদর রজনীতে। আপনি কি জানেন, মহিমাময় কদর রজনী কী? মহিমান্বিত কদর রজনী হাজার মাস অপেক্ষা উত্তম।”  
-            <br><small>(সূরা আল কদর: ১-৩)</small>
-        </blockquote>
+            <!-- Probable Nights Card -->
+            <article class="card">
+                <h2 class="card-title" id="v2-title">🔹 শবে কদরের সম্ভাব্য রাতসমূহ</h2>
+                <div class="card-body">
+                    <p id="v2-text">
+                        রমজানের শেষ দশদিনের যেকোনো বিজোড় রাতে লাইলাতুল কদর হতে পারে, অর্থাৎ ২১, ২৩, ২৫, ২৭ বা ২৯ রমজানের
+                        রাতে। তবে অধিকাংশ আলেমের মতে <strong>২৭ রমজান</strong> লাইলাতুল কদরের সম্ভাব্য রাত।
+                    </p>
+                </div>
+            </article>
 
-        <p>রমজান মাসে পবিত্র কুরআন নাজিলের ফলে <strong>শবে কদর</strong> অত্যন্ত মর্যাদাপূর্ণ হয়েছে। মহানবী (ﷺ) বলেন, “যে ব্যক্তি লাইলাতুল কদরে <strong>ইবাদত-বন্দেগি</strong> করবে, তার পূর্বের সমস্ত গুনাহ মাফ হয়ে যাবে।” (বুখারী, মুসলিম)</p>
+            <!-- Special Dua Card -->
+            <article class="card" style="border-color: var(--border-gold); background: rgba(212, 175, 55, 0.03);">
+                <h2 class="card-title" id="v3-title">🤲 লাইলাতুল কদরের বিশেষ দোয়া</h2>
+                <div class="card-body">
+                    <div class="dua-arabic">اللَّهُمَّ إِنَّكَ عَفُوٌّ تُحِبُّ العَفْوَ فَاعْفُ عَنِّي</div>
+                    <div class="dua-transliteration" id="v3-transliteration">উচ্চারণ: আল্লাহুম্মা ইন্নাকা আফউউন,
+                        তুহিব্বুল আফওয়া, ফা'ফু আন্নী।</div>
+                    <div class="dua-translation" id="v3-translation">অর্থ: “হে আল্লাহ! আপনি ক্ষমাশীল, ক্ষমা করতে
+                        ভালোবাসেন, সুতরাং আমাকে ক্ষমা করুন।”</div>
+                </div>
+            </article>
 
-        <h2>🔹 শবে কদরের সম্ভাব্য রাত</h2>
-        <p>রমজানের শেষ দশদিনের যেকোনো বিজোড় রাতে লাইলাতুল কদর হতে পারে, অর্থাৎ ২১, ২৩, ২৫, ২৭ বা ২৯ রমজানের রাতে। তবে অধিকাংশ আলেমের মতে <strong>২৭ রমজান</strong> লাইলাতুল কদরের সম্ভাব্য রাত।</p>
+            <!-- Recommended Deeds Card -->
+            <article class="card">
+                <h2 class="card-title" id="v4-title">🕌 লাইলাতুল কদরে করণীয় আমল</h2>
+                <div class="card-body">
+                    <ul class="virtues-list" id="virtues-list-container">
+                        <!-- Populated dynamically via JS -->
+                    </ul>
+                </div>
+            </article>
+        </div>
 
-        <h2>🕌 লাইলাতুল কদরে করণীয় আমল</h2>
-        <ul>
-            <li>🌙 বেশি করে <strong>ইবাদত</strong> ও কুরআন তিলাওয়াত করা</li>
-            <li>🕋 <strong>নফল নামাজ</strong> আদায় করা</li>
-            <li>🤲 <strong>তওবা-ইস্তিগফার</strong> করা</li>
-            <li>🎁 গরিব-দুঃখীদের মাঝে <strong>সদকা</strong> প্রদান করা</li>
-            <li>💬 এই দোয়া বেশি বেশি পড়া:  
-                <blockquote style="background: #eef; padding: 10px; border-left: 4px solid #2a5298;">
-                    <b>اللَّهُمَّ إِنَّكَ عَفُوٌّ تُحِبُّ العَفْوَ فَاعْفُ عَنِّي</b>  
-                    <br> <small>উচ্চারণ: আল্লাহুম্মা ইন্নাকা আফুউন, তুহিব্বুল আফওয়া, ফা'ফু আন্নী।</small>  
-                    <br> <small>(অর্থ: হে আল্লাহ! আপনি ক্ষমাশীল, ক্ষমা করতে ভালোবাসেন, আমাকে ক্ষমা করুন)</small>  
-                </blockquote>
-            </li>
-        </ul>
+        <!-- Back Button Navigation -->
+        <div style="text-align: center; margin-top: 36px;">
+            <a href="index.html" class="btn-primary" style="text-decoration: none; display: inline-block;">
+                <span id="back-btn-text">← চেকলিস্টে ফিরে যান</span>
+            </a>
+        </div>
+    </main>
 
-        <h2>✨ লাইলাতুল কদরের মর্যাদা</h2>
-        <p>রাসুলুল্লাহ (ﷺ) আজীবন রমজানের শেষ দশকে ইতেকাফ করেছেন লাইলাতুল কদর পাওয়ার জন্য। তিনি বলেন,</p>
-        <blockquote style="background: #eef; padding: 10px; border-left: 4px solid #2a5298;">
-            “আমি প্রথম ১০ দিন ইতিকাফ করলাম, তারপর মাঝের ১০ দিন। তারপর ওহি নাযিল হল যে, কদরের রাত <strong>শেষ ১০ দিনে</strong> আছে। তাই তোমরা ইতিকাফ কর।”  
-            <br><small>(মুসলিম শরীফ)</small>
-        </blockquote>
-
-        <h2>📢 উপসংহার</h2>
-        <p>লাইলাতুল কদর আমাদের জন্য বিশাল নেয়ামত। এই রাত আমাদের জীবনের সব গুনাহ মাফ করিয়ে দিতে পারে যদি আমরা সঠিকভাবে ইবাদত করি।</p>
-
-        <p>আসুন, আমরা এই রাতের প্রতি <strong>গুরুত্ব</strong> দিই এবং <strong>আল্লাহর রহমত</strong> লাভের জন্য সর্বোচ্চ চেষ্টা করি। আল্লাহ আমাদের সকল ইবাদত কবুল করুন, আমিন। 🤲</p>
-
-        <a href="index.html" class="back-btn">🔙 পূর্বের পৃষ্ঠায় ফিরে যান</a>
-    </div>
-
+    <script src="./script.js"></script>
 </body>
+
 </html>

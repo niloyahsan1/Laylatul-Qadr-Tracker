@@ -1,43 +1,163 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laylatul Qadr Checklist</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link id="stylesheet" rel="stylesheet" type="text/css" href="./styles.css">
-    <!-- <link rel="website icon" type="png" href="./image/logo.png"> -->
+    <title>Laylatul Qadr Tracker</title>
+    <meta name="description"
+        content="Laylatul Qadr checklist, virtues, prayers, and recommended spiritual deeds for the blessed Night of Power.">
+    <link rel="icon" type="image/png" href="./assets/favicon.png">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Hind+Siliguri:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
 </head>
 
 <body>
-    <div class="header-container">
-        <h1 id="title">Laylatul Qadr Checklist</h1>
-        <button class="translate-btn" onclick="toggleLanguage()">Switch to বাংলা</button>
-    </div>
-    
-    <div id="checklist-container">
-        <p id="intro">This could be the night of power which is equal to <strong>83 years</strong> (1000 months of worship). Complete the checklist below:</p>
-        <ul id="checklist">
-            <li><span class="task-text">Astaghfirullah (100 times)</span> <input type="checkbox"></li>
-            <li><span class="task-text">SubhanAllah (100 times)</span> <input type="checkbox"></li>
-            <li><span class="task-text">Allahu Akbar (100 times)</span> <input type="checkbox"></li>
-            <li><span class="task-text">Recite Surah Ikhlas (3 times)</span> <input type="checkbox"></li>
-            <li><span class="task-text">Pray 2 Rakats Nafl Salah (as much as you can)</span> <input type="checkbox"></li>
-            <li><span class="task-text">Read at least 1 page of the Quran (try more if you can)</span> <input type="checkbox"></li>
-            <li><span class="task-text">Give charity (Even a small amount)</span> <input type="checkbox"></li>
-        </ul>
-        <p class="info" id="info1">✔ Reflect & Repent: Seek forgiveness sincerely and make intentions for positive changes in life.</p>
-        <p class="info" id="info2">✔ Avoid Distractions: Stay away from unnecessary conversations, social media, or anything that takes time away from worship.</p>
-        <p class="info" id="info3">✔ The virtues and deeds of Laylatul Qadr: <a href="./virtues.html" style="color: yellow; text-decoration: none;" target="_blank">Click Here</a>
-        </p>        
-    </div>
-    
-    <div class="popup" id="popup">
-        <h1 id="popup-title">Congratulations!</h1>
-        <p id="popup-text">You have successfully completed all the checklists. May Allah accept your prayers and grant you endless blessings on this blessed night! (Amin)</p>
-    </div>
-    
-    <script src="./script.js"></script>
+    <!-- Top Header Row: Most left links, centered title, most right button -->
+    <header class="top-header-row">
+        <div class="nav-links">
+            <a href="index.html" class="nav-item active" id="nav-checklist">চেকলিস্ট</a>
+            <a href="virtues.html" class="nav-item" id="nav-virtues">ফজিলত ও আমল</a>
+        </div>
+        <h1 class="header-title" id="hero-title">লাইলাতুল কদর চেকলিস্ট</h1>
+        <div class="lang-btn-wrapper">
+            <button class="lang-btn" id="lang-toggle-btn">
+                <span id="lang-btn-text">English</span>
+            </button>
+        </div>
+    </header>
 
+    <!-- Main Content Container -->
+    <main class="main-container">
+        <p class="hero-subtitle" id="hero-subtitle" style="text-align: center; margin-bottom: 24px;">
+            এটি হতে পারে সেই মহিমান্বিত রাত যা <strong>৮৩ বছর ৪ মাস</strong> (১,০০০ মাস) ইবাদতের চেয়ে উত্তম। আপনার আমলের
+            চেকলিস্ট সম্পন্ন করুন:
+        </p>
+
+        <!-- Progress Tracker Card -->
+        <section class="progress-card">
+            <div class="progress-header">
+                <span class="progress-label" id="progress-label">সম্পন্ন আমলসমূহ</span>
+                <span class="progress-count" id="progress-count">0 / 7 (0%)</span>
+            </div>
+            <div class="progress-bar-bg">
+                <div class="progress-bar-fill" id="progress-fill"></div>
+            </div>
+        </section>
+
+        <!-- Interactive Checklist Section -->
+        <section class="checklist-wrapper" id="checklist">
+            <div class="task-item task-1">
+                <div class="task-left">
+                    <span class="task-num-badge">01</span>
+                    <span class="task-text">আস্তাগফিরুল্লাহ (১০০ বার)</span>
+                </div>
+                <div class="custom-checkbox">
+                    <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </div>
+            </div>
+
+            <div class="task-item task-2">
+                <div class="task-left">
+                    <span class="task-num-badge">02</span>
+                    <span class="task-text">সুবহানআল্লাহ (১০০ বার)</span>
+                </div>
+                <div class="custom-checkbox">
+                    <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </div>
+            </div>
+
+            <div class="task-item task-3">
+                <div class="task-left">
+                    <span class="task-num-badge">03</span>
+                    <span class="task-text">আল্লাহু আকবার (১০০ বার)</span>
+                </div>
+                <div class="custom-checkbox">
+                    <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </div>
+            </div>
+
+            <div class="task-item task-4">
+                <div class="task-left">
+                    <span class="task-num-badge">04</span>
+                    <span class="task-text">সূরা ইখলাস পড়ুন (৩ বার)</span>
+                </div>
+                <div class="custom-checkbox">
+                    <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </div>
+            </div>
+
+            <div class="task-item task-5">
+                <div class="task-left">
+                    <span class="task-num-badge">05</span>
+                    <span class="task-text">২ রাকাত নফল সালাত পড়ুন (যত পারেন)</span>
+                </div>
+                <div class="custom-checkbox">
+                    <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </div>
+            </div>
+
+            <div class="task-item task-6">
+                <div class="task-left">
+                    <span class="task-num-badge">06</span>
+                    <span class="task-text">কমপক্ষে ১ পৃষ্ঠা কুরআন পড়ুন (বেশি চেষ্টা করুন)</span>
+                </div>
+                <div class="custom-checkbox">
+                    <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </div>
+            </div>
+
+            <div class="task-item task-7">
+                <div class="task-left">
+                    <span class="task-num-badge">07</span>
+                    <span class="task-text">দান করুন (একটি ছোট পরিমাণ হলেও)</span>
+                </div>
+                <div class="custom-checkbox">
+                    <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Tips & Virtues Link Cards -->
+        <section class="tips-section">
+            <div class="tip-card">
+                <div class="tip-content">
+                    <h3 class="tip-title" id="tip1-title">তওবা ও অনুশোচনা</h3>
+                    <p class="tip-desc" id="tip1-desc">আন্তরিকভাবে ক্ষমা চান এবং ইতিবাচক পরিবর্তনের জন্য নিয়ত করুন।</p>
+                </div>
+            </div>
+
+            <div class="tip-card">
+                <div class="tip-content">
+                    <h3 class="tip-title" id="tip2-title">বিভ্রান্তি এড়ান</h3>
+                    <p class="tip-desc" id="tip2-desc">অপ্রয়োজনীয় কথা বলা বা সোশ্যাল মিডিয়া থেকে দূরে থাকুন।</p>
+                </div>
+            </div>
+
+            <a href="virtues.html" class="tip-card link-card">
+                <div class="tip-content">
+                    <h3 class="tip-title" id="tip3-title">ফজিলত ও আমলসমূহ</h3>
+                    <p class="tip-desc" id="tip3-desc">লাইলাতুল কদরের পবিত্র আয়াত ও হাদিস পড়ুন →</p>
+                </div>
+            </a>
+        </section>
+    </main>
+
+    <!-- Completion Modal Popup -->
+    <div class="modal-overlay" id="completion-modal">
+        <div class="modal-content">
+            <div class="modal-icon">🌙</div>
+            <h2 class="modal-title" id="modal-title">অভিনন্দন!</h2>
+            <p class="modal-text" id="modal-text">
+                আপনি সফলভাবে সমস্ত চেকলিস্ট সম্পন্ন করেছেন। আল্লাহ আপনার সমস্ত দোয়া কবুল করুন এবং এই বরকতময় রাতে আপনাকে অফুরন্ত রহমত দান করুন! (আমিন)
+            </p>
+            <button class="btn-primary" id="modal-btn" onclick="closeModal()">বন্ধ করুন</button>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
 </body>
 </html>
